@@ -1,0 +1,133 @@
+.hero-section {
+  width: 100vw;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  margin-top: 0;
+  z-index: 1;
+}
+
+.hero-slider {
+  width: 100vw;
+  min-height: 100vh;
+  position: relative;
+}
+
+.hero-slide {
+  width: 100vw;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-overlay {
+  width: 100vw;
+  min-height: 100vh;
+  background: linear-gradient(120deg, rgba(60,40,20,0.65) 0%, rgba(120,90,60,0.45) 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 24px;
+}
+
+.hero-heading {
+  color: #ffe9c7;
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-shadow: 0 4px 24px rgba(60,40,20,0.25);
+}
+
+.hero-subheading {
+  color: #f5e6d3;
+  font-size: 1.35rem;
+  margin: 18px 0 32px 0;
+  font-weight: 500;
+  text-shadow: 0 2px 12px rgba(60,40,20,0.18);
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+.hero-btn {
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 12px 32px;
+  border-radius: 32px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 12px 0 rgba(60,40,20,0.10);
+}
+.hero-btn-primary {
+  background: linear-gradient(90deg, #7c4f1d 0%, #b07d3c 100%);
+  color: #fffbe9;
+}
+.hero-btn-primary:hover {
+  background: linear-gradient(90deg, #b07d3c 0%, #7c4f1d 100%);
+  color: #fffbe9;
+}
+.hero-btn-outline {
+  background: transparent;
+  color: #b07d3c;
+  border: 2px solid #b07d3c;
+}
+.hero-btn-outline:hover {
+  background: #b07d3c;
+  color: #fffbe9;
+}
+
+.hero-pagination {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 48px;
+  margin-bottom: 16px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 32px;
+  z-index: 2;
+}
+
+.hero-dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid #fffbe9;
+  background: rgba(176,125,60,0.7);
+  box-shadow: 0 2px 8px 0 rgba(60,40,20,0.10);
+  cursor: pointer;
+  transition: background 0.2s, border 0.2s, box-shadow 0.2s;
+  outline: none;
+}
+.hero-dot.active, .hero-dot:hover {
+  background: #b07d3c;
+  border-color: #ffe9c7;
+  box-shadow: 0 4px 16px 0 rgba(176,125,60,0.18);
+}
+
+@media (max-width: 768px) {
+  .hero-heading {
+    font-size: 2rem;
+  }
+  .hero-subheading {
+    font-size: 1rem;
+  }
+  .hero-btn {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+}

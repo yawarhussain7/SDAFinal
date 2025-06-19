@@ -1,0 +1,73 @@
+.destinations-table-wrapper {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px 0 rgba(44,103,119,0.07);
+  padding: 32px 28px 24px 28px;
+  margin-bottom: 32px;
+}
+.destinations-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 1rem;
+  background: transparent;
+}
+.destinations-table th, .destinations-table td {
+  padding: 14px 16px;
+  text-align: left;
+}
+.destinations-table th {
+  background: #f7f9fa;
+  font-weight: 700;
+  color: #0d6efd;
+  border-bottom: 2px solid #e3e7ed;
+}
+.destinations-table tr {
+  border-bottom: 1px solid #ececec;
+  transition: background 0.2s;
+}
+.destinations-table tr:nth-child(even) {
+  background: #f3f6fa;
+}
+.destinations-table tr:hover {
+  background: #eaf3ff;
+}
+.destinations-table td {
+  color: #222;
+}
+.destinations-table tr:last-child {
+  border-bottom: none;
+}
+.destinations-action-btn {
+  background: #0d6efd;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 22px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-right: 6px;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px 0 rgba(44,103,119,0.08);
+}
+.destinations-action-btn:last-child {
+  margin-right: 0;
+}
+.destinations-action-btn:hover {
+  background: #094db1;
+  color: #fff;
+}
+.destinations-action-danger {
+  background: #ffeaea;
+  color: #d32f2f;
+}
+.destinations-action-danger:hover {
+  background: #d32f2f;
+  color: #fff;
+}
+@media (max-width: 1100px) {
+  .destinations-table-wrapper {
+    padding: 18px 6vw;
+  }
+} 

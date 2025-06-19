@@ -1,0 +1,269 @@
+/* Root wrapper */
+
+.placepage-root {
+  background: #f7f9fa;
+  min-height: 100vh;
+}
+
+
+/* Hero Section */
+
+.placepage-hero {
+  background: #0d2a2e;
+  padding: 100px 0 36px 0;
+  text-align: center;
+  min-height: 260px;
+}
+
+.placepage-hero-title {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 12px;
+  font-family: 'Poppins', 'Inter', Arial, sans-serif;
+}
+
+.placepage-hero-desc {
+  color: #e3e7ed;
+  font-size: 1.18rem;
+  margin-bottom: 0;
+}
+
+
+/* Places Grid Section */
+
+.placepage-main {
+  background: #fff;
+  padding: 36px 0 0 0;
+}
+
+.placepage-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto 32px auto;
+  padding: 0 18px;
+}
+
+.placepage-card {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 6px 32px 0 rgba(44, 103, 119, 0.13);
+  background: linear-gradient(135deg, #e3e7ed 0%, #f7f9fa 100%);
+  display: flex;
+  flex-direction: column;
+  min-height: 320px;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.placepage-card:hover {
+  box-shadow: 0 12px 40px 0 rgba(44, 103, 119, 0.18);
+  transform: translateY(-6px) scale(1.02);
+}
+
+.placepage-img {
+  width: 100%;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.placepage-info {
+  padding: 18px 18px 14px 18px;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+}
+
+.placepage-region {
+  font-size: 0.98rem;
+  color: #21747b;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.placepage-name {
+  font-size: 1.18rem;
+  font-weight: 700;
+  color: #1a2235;
+  margin-bottom: 6px;
+}
+
+.placepage-desc {
+  color: #444;
+  font-size: 1.01rem;
+  margin-bottom: 18px;
+}
+
+.placepage-btn {
+  background: #21747b;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 9px 0;
+  font-size: 1.05rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-top: auto;
+}
+
+.placepage-btn:hover {
+  background: #17444a;
+}
+
+
+/* Activities Section */
+
+.placepage-activities {
+  background: #eaf3f6;
+  text-align: center;
+  padding: 44px 0 36px 0;
+}
+
+.placepage-activities-title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #21747b;
+  margin-bottom: 8px;
+}
+
+.placepage-activities-desc {
+  color: #444;
+  font-size: 1.08rem;
+  margin-bottom: 28px;
+}
+
+.placepage-activities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 22px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 12px;
+}
+
+.placepage-activity-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 18px 0 rgba(44, 103, 119, 0.10);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 18px 0 14px 0;
+  min-height: 140px;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.placepage-activity-card:hover {
+  box-shadow: 0 8px 28px 0 rgba(44, 103, 119, 0.16);
+  transform: translateY(-4px) scale(1.02);
+}
+
+.placepage-activity-img {
+  width: 60px;
+  height: 60px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  margin-bottom: 12px;
+}
+
+.placepage-activity-name {
+  font-size: 1.08rem;
+  font-weight: 600;
+  color: #21747b;
+}
+
+
+/* Call to Action Section */
+
+.placepage-cta {
+  background: #fff;
+  text-align: center;
+  padding: 44px 0 36px 0;
+  margin-top: 0;
+}
+
+.placepage-cta-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #21747b;
+  margin-bottom: 10px;
+}
+
+.placepage-cta-desc {
+  color: #444;
+  font-size: 1.08rem;
+  margin-bottom: 24px;
+}
+
+.placepage-cta-actions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+
+.placepage-cta-btn {
+  padding: 10px 28px;
+  border-radius: 8px;
+  font-size: 1.08rem;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, border 0.2s;
+}
+
+.placepage-cta-browse {
+  background: #21747b;
+  color: #fff;
+}
+
+.placepage-cta-browse:hover {
+  background: #17444a;
+}
+
+.placepage-cta-contact {
+  background: #fff;
+  color: #21747b;
+  border: 1.5px solid #21747b;
+}
+
+.placepage-cta-contact:hover {
+  background: #e3e7ed;
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 900px) {
+
+  .placepage-grid,
+  .placepage-activities-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .placepage-hero-title {
+    font-size: 1.3rem;
+  }
+
+  .placepage-grid,
+  .placepage-activities-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .placepage-main {
+    padding: 18px 0 0 0;
+  }
+
+  .placepage-cta-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

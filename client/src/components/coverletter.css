@@ -1,0 +1,52 @@
+.coverletter-section {
+  background: linear-gradient(120deg, #fffbe9 0%, #f5e6d3 100%);
+  padding: 72px 0 64px 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+.coverletter-content {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 18px;
+}
+.coverletter-title {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: #7c4f1d;
+  margin-bottom: 18px;
+}
+.coverletter-desc {
+  color: #5a4a3c;
+  font-size: 1.25rem;
+  margin-bottom: 36px;
+  font-weight: 500;
+}
+.coverletter-btn {
+  background: linear-gradient(90deg, #7c4f1d 0%, #b07d3c 100%);
+  color: #fffbe9;
+  border: none;
+  border-radius: 22px;
+  padding: 16px 44px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s;
+  box-shadow: 0 2px 12px 0 rgba(120,90,60,0.10);
+}
+.coverletter-btn:hover {
+  background: linear-gradient(90deg, #b07d3c 0%, #7c4f1d 100%);
+}
+
+@media (max-width: 600px) {
+  .coverletter-title {
+    font-size: 1.3rem;
+  }
+  .coverletter-desc {
+    font-size: 1rem;
+  }
+  .coverletter-btn {
+    font-size: 1rem;
+    padding: 12px 24px;
+  }
+} 

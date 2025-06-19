@@ -1,0 +1,140 @@
+ .login-section {
+     position: relative;
+     overflow: hidden;
+     background-attachment: fixed;
+ }
+
+ .login-section::before {
+     content: "";
+     position: absolute;
+     top: 0;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     background: rgba(15, 32, 39, 0.5);
+     z-index: 1;
+ }
+
+ .container {
+     position: relative;
+     z-index: 2;
+ }
+
+ .glassmorphism {
+     background: rgba(255, 255, 255, 0.95);
+     backdrop-filter: blur(10px);
+     border: 1px solid rgba(255, 255, 255, 0.2);
+     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+ }
+
+ .section-title {
+     position: relative;
+     display: inline-block;
+     color: #2b6777;
+ }
+
+ .section-title::after {
+     content: "";
+     position: absolute;
+     bottom: -8px;
+     left: 50%;
+     transform: translateX(-50%);
+     width: 60px;
+     height: 3px;
+     background: linear-gradient(135deg, #b07d3c, #a0522d);
+     border-radius: 2px;
+ }
+
+ .form-control {
+     border: 1px solid #ddd;
+     border-radius: 8px;
+     padding: 0.75rem;
+     transition: all 0.3s ease;
+ }
+
+ .form-control:focus {
+     border-color: #b07d3c;
+     box-shadow: 0 0 0 0.2rem rgba(176, 125, 60, 0.25);
+ }
+
+ .form-floating>label {
+     color: #6c757d;
+     transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem);
+ }
+
+ .form-floating>.form-control:focus~label,
+ .form-floating>.form-control:not(:placeholder-shown)~label {
+     color: #b07d3c;
+ }
+
+ .btn-gradient {
+     background: linear-gradient(135deg, #b07d3c, #a0522d);
+     border: none;
+     transition: all 0.3s ease;
+ }
+
+ .btn-gradient:hover {
+     transform: translateY(-2px);
+     box-shadow: 0 6px 15px rgba(176, 125, 60, 0.3);
+ }
+
+ .text-primary {
+     color: #b07d3c !important;
+     transition: color 0.3s;
+ }
+
+ .text-primary:hover {
+     color: #a0522d !important;
+ }
+
+ .social-login-btn {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     width: 40px;
+     height: 40px;
+     border-radius: 50%;
+     background: rgba(255, 255, 255, 0.1);
+     border: 1px solid rgba(255, 255, 255, 0.2);
+     transition: all 0.3s ease;
+ }
+
+ .social-login-btn:hover {
+     background: #b07d3c;
+     transform: scale(1.1);
+ }
+
+ .social-login-btn:hover .social-svg path {
+     fill: #fffbe9;
+ }
+
+ .social-svg {
+     width: 20px;
+     height: 20px;
+ }
+
+ .fade-in {
+     animation: fadeIn 1s ease-out;
+ }
+
+ @keyframes fadeIn {
+     from {
+         opacity: 0;
+         transform: translateY(20px);
+     }
+
+     to {
+         opacity: 1;
+         transform: translateY(0);
+     }
+ }
+
+ @media (max-width: 991px) {
+     .login-section {
+         padding: 2rem 0;
+     }
+
+     .card {
+         padding: 2rem !important;
+     }
+ }

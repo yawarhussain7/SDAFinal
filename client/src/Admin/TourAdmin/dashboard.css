@@ -1,0 +1,632 @@
+/* === General Dashboard Styles === */
+
+.dashboard-overview {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.overview-card {
+    flex: 1 1 220px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 12px;
+    color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.overview-card i {
+    font-size: 2rem;
+}
+
+.overview-card h4 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.overview-card p {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.overview-card.blue {
+    background-color: #0d6efd;
+}
+
+.overview-card.green {
+    background-color: #198754;
+}
+
+.overview-card.orange {
+    background-color: #fd7e14;
+}
+
+.overview-card.purple {
+    background-color: #6f42c1;
+}
+
+.dashboard-chart {
+    background: white;
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+
+/* === Reset & Base Styles === */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+    background: #f8fafc;
+    color: #1e293b;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+
+/* === Dashboard Container === */
+
+.dashboard-container {
+    display: flex;
+    min-height: 100vh;
+    background: #f8fafc;
+}
+
+
+/* === Loading State === */
+
+.dashboard-loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: #f8fafc;
+}
+
+.loading-spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid #e2e8f0;
+    border-top: 3px solid #3b82f6;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 16px;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.dashboard-loading p {
+    color: #64748b;
+    font-size: 16px;
+}
+
+
+/* === Sidebar === */
+
+.dashboard-sidebar {
+    width: 280px;
+    background: #ffffff;
+    border-right: 1px solid #e2e8f0;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    z-index: 10;
+}
+
+.dashboard-sidebar.collapsed {
+    width: 80px;
+}
+
+
+/* === Sidebar Header === */
+
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 20px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.brand-section {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.brand-icon {
+    width: 44px;
+    height: 44px;
+    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15);
+}
+
+.brand-text h1 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1e293b;
+    margin: 0;
+}
+
+.brand-text span {
+    font-size: 12px;
+    color: #64748b;
+    font-weight: 500;
+}
+
+.sidebar-toggle {
+    width: 32px;
+    height: 32px;
+    border: none;
+    background: #f1f5f9;
+    border-radius: 8px;
+    color: #64748b;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+}
+
+.sidebar-toggle:hover {
+    background: #e2e8f0;
+    color: #1e293b;
+}
+
+
+/* === Profile Section === */
+
+.sidebar-profile {
+    padding: 20px;
+    border-bottom: 1px solid #f1f5f9;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.profile-avatar {
+    position: relative;
+    flex-shrink: 0;
+}
+
+.profile-avatar img {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    object-fit: cover;
+    border: 2px solid #f1f5f9;
+}
+
+.profile-status {
+    position: absolute;
+    bottom: -2px;
+    right: -2px;
+    width: 16px;
+    height: 16px;
+    background: #10b981;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+
+.profile-info h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 2px;
+}
+
+.profile-info p {
+    font-size: 13px;
+    color: #64748b;
+    margin-bottom: 4px;
+}
+
+.greeting {
+    font-size: 12px;
+    color: #3b82f6;
+    font-weight: 500;
+    background: #eff6ff;
+    padding: 2px 8px;
+    border-radius: 12px;
+}
+
+
+/* === Navigation === */
+
+.sidebar-nav {
+    flex: 1;
+    padding: 8px 0;
+}
+
+.sidebar-nav ul {
+    list-style: none;
+}
+
+.sidebar-nav li {
+    margin: 0 14px 6px;
+}
+
+.nav-item {
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    transition: all 0.2s;
+    position: relative;
+    text-align: left;
+}
+
+.nav-item.active {
+    background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+    color: #1d4ed8;
+    box-shadow: 0 2px 4px rgba(59, 130, 246, 0.1);
+}
+
+.nav-icon {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    color: #64748b;
+    transition: color 0.2s;
+}
+
+.nav-item.active .nav-icon {
+    color: #1d4ed8;
+}
+
+.nav-content {
+    flex: 1;
+}
+
+.nav-label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    color: #1e293b;
+    margin-bottom: 2px;
+}
+
+.nav-description {
+    display: block;
+    font-size: 12px;
+    color: #64748b;
+}
+
+.nav-item.active .nav-label {
+    color: #1d4ed8;
+}
+
+.nav-indicator {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 16px;
+    background: #3b82f6;
+    border-radius: 2px;
+}
+
+
+/* === Sidebar Footer === */
+
+.sidebar-footer {
+    padding: 20px;
+    border-top: 1px solid #f1f5f9;
+}
+
+.logout-btn {
+    width: 100%;
+    padding: 12px 16px;
+    background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%);
+    border: 1px solid #fecaca;
+    color: #dc2626;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: center;
+    transition: all 0.2s;
+}
+
+.logout-btn:hover {
+    background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+    color: white;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(220, 38, 38, 0.15);
+}
+
+
+/* === Main Content === */
+
+.dashboard-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+
+/* === Main Header === */
+
+.main-header {
+    background: white;
+    border-bottom: 1px solid #e2e8f0;
+    padding: 24px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+}
+
+.page-title h1 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 4px;
+}
+
+.page-title p {
+    font-size: 14px;
+    color: #64748b;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.action-btn {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: #f8fafc;
+    border-radius: 10px;
+    color: #64748b;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: all 0.2s;
+    font-size: 16px;
+}
+
+.action-btn:hover {
+    background: #f1f5f9;
+    color: #1e293b;
+}
+
+.notification-badge {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    background: #ef4444;
+    color: white;
+    font-size: 10px;
+    font-weight: 600;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid white;
+}
+
+
+/* === Main Content Area === */
+
+.main-content {
+    flex: 1;
+    padding: 32px;
+    overflow-y: auto;
+    background: #f8fafc;
+}
+
+
+/* === Global Content Containers === */
+
+.tourpackage-form,
+.customers-table-wrapper,
+.bookings-table-wrapper,
+.destinations-table-wrapper,
+.settings-form {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+    border: 1px solid #f1f5f9;
+    padding: 24px;
+    margin-bottom: 24px;
+    transition: all 0.2s;
+}
+
+.tourpackage-form:hover,
+.customers-table-wrapper:hover,
+.bookings-table-wrapper:hover,
+.destinations-table-wrapper:hover,
+.settings-form:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transform: translateY(-1px);
+}
+
+
+/* === Responsive Design === */
+
+@media (max-width: 1200px) {
+    .dashboard-sidebar {
+        width: 260px;
+    }
+
+    .main-header {
+        padding: 20px 24px;
+    }
+
+    .main-content {
+        padding: 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    .dashboard-container {
+        flex-direction: column;
+    }
+
+    .dashboard-sidebar {
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid #e2e8f0;
+    }
+
+    .dashboard-sidebar.collapsed {
+        width: 100%;
+    }
+
+    .sidebar-header {
+        padding: 16px 20px;
+    }
+
+    .sidebar-profile {
+        padding: 16px 20px;
+    }
+
+    .sidebar-nav {
+        max-height: 300px;
+        overflow-y: auto;
+    }
+
+    .sidebar-footer {
+        padding: 16px 20px;
+    }
+
+    .main-header {
+        padding: 16px 20px;
+    }
+
+    .main-content {
+        padding: 20px;
+    }
+
+    .page-title h1 {
+        font-size: 20px;
+    }
+
+    .brand-text h1 {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .header-actions {
+        align-self: flex-end;
+    }
+
+    .main-content {
+        padding: 16px;
+    }
+
+    .tourpackage-form,
+    .customers-table-wrapper,
+    .bookings-table-wrapper,
+    .destinations-table-wrapper,
+    .settings-form {
+        padding: 16px;
+        border-radius: 12px;
+    }
+}
+
+
+/* === Custom Scrollbar === */
+
+.sidebar-nav::-webkit-scrollbar,
+.main-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.sidebar-nav::-webkit-scrollbar-track,
+.main-content::-webkit-scrollbar-track {
+    background: #f1f5f9;
+    border-radius: 3px;
+}
+
+.sidebar-nav::-webkit-scrollbar-thumb,
+.main-content::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 3px;
+}
+
+.sidebar-nav::-webkit-scrollbar-thumb:hover,
+.main-content::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+
+/* === Focus States === */
+
+.nav-item:focus,
+.logout-btn:focus,
+.action-btn:focus,
+.sidebar-toggle:focus {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+}
+
+
+/* === Animation for smooth transitions === */
+
+@media (prefers-reduced-motion: no-preference) {
+
+    .dashboard-sidebar,
+    .nav-item,
+    .logout-btn,
+    .action-btn,
+    .sidebar-toggle {
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+}

@@ -1,0 +1,266 @@
+ /* bookings.css */
+ /* Main container styles */
+
+ .booking-container {
+   padding: 30px 20px;
+   max-width: 1400px;
+   margin: 0 auto;
+ }
+
+ /* Header section styles */
+
+ .header-section {
+   margin-bottom: 25px;
+ }
+
+ .dashboard-title {
+   font-size: 2rem;
+   font-weight: 700;
+   color: #2c3e50;
+   margin-bottom: 5px;
+ }
+
+ .dashboard-subtitle {
+   color: #7f8c8d;
+   margin-bottom: 0;
+ }
+
+ .new-booking-btn {
+   padding: 10px 20px;
+   font-weight: 600;
+   box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+   transition: all 0.3s;
+ }
+
+ .new-booking-btn:hover {
+   transform: translateY(-1px);
+   box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
+ }
+
+ /* Card styles */
+
+ .booking-card {
+   background-color: #fff;
+   border-radius: 12px;
+   box-shadow: 0 5px 20px rgba(44, 103, 119, 0.1);
+   margin-bottom: 30px;
+   overflow: hidden;
+   border: none;
+ }
+
+ /* Card header styles */
+
+ .card-header-custom {
+   padding: 20px 25px;
+   background-color: #f8f9fa;
+   border-bottom: 1px solid #e9ecef;
+ }
+
+ .section-title {
+   font-size: 1.2rem;
+   font-weight: 600;
+   color: #2c3e50;
+   margin-bottom: 0;
+ }
+
+ /* Search input styles */
+
+ .search-container {
+   position: relative;
+   max-width: 300px;
+   margin-left: auto;
+ }
+
+ .search-input {
+   padding-left: 40px;
+   border-radius: 8px;
+   border: 1px solid #ced4da;
+   transition: all 0.3s;
+ }
+
+ .search-input:focus {
+   box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.15);
+   border-color: #86b7fe;
+ }
+
+ .search-icon {
+   position: absolute;
+   left: 14px;
+   top: 50%;
+   transform: translateY(-50%);
+   color: #adb5bd;
+ }
+
+ /* Table styles */
+
+ .bookings-table {
+   margin-bottom: 0;
+ }
+
+ .bookings-table thead th {
+   background-color: #f8f9fa;
+   font-weight: 600;
+   color: #0d6efd;
+   border-top: none;
+   border-bottom: 2px solid #dee2e6;
+   padding: 15px 25px;
+   font-size: 0.85rem;
+   text-transform: uppercase;
+   letter-spacing: 0.5px;
+ }
+
+ .bookings-table tbody tr {
+   transition: background-color 0.2s;
+ }
+
+ .bookings-table tbody tr:hover {
+   background-color: #f0f7ff;
+ }
+
+ .bookings-table td {
+   padding: 18px 25px;
+   vertical-align: middle;
+   color: #343a40;
+   border-bottom: 1px solid #e9ecef;
+ }
+
+ .booking-id {
+   font-weight: 600;
+   color: #0d6efd;
+ }
+
+ /* Status badge styles */
+
+ .status-badge {
+   padding: 6px 12px;
+   border-radius: 50px;
+   font-size: 0.75rem;
+   font-weight: 600;
+   display: inline-block;
+ }
+
+ .status-confirmed {
+   background-color: #d4edda;
+   color: #155724;
+ }
+
+ .status-pending {
+   background-color: #fff3cd;
+   color: #856404;
+ }
+
+ .status-cancelled {
+   background-color: #f8d7da;
+   color: #721c24;
+ }
+
+ /* Action button styles */
+
+ .action-buttons {
+   display: flex;
+   gap: 8px;
+ }
+
+ .btn-view {
+   background-color: #e7f1ff;
+   color: #0d6efd;
+   border: none;
+   transition: all 0.2s;
+ }
+
+ .btn-view:hover {
+   background-color: #0d6efd;
+   color: #fff;
+ }
+
+ .btn-delete {
+   background-color: #fbebeb;
+   color: #dc3545;
+   border: none;
+   transition: all 0.2s;
+ }
+
+ .btn-delete:hover {
+   background-color: #dc3545;
+   color: #fff;
+ }
+
+ /* Pagination styles */
+
+ .pagination-container {
+   padding: 15px 25px;
+   background-color: #f8f9fa;
+   border-top: 1px solid #e9ecef;
+ }
+
+ .pagination-info {
+   color: #6c757d;
+   margin-bottom: 0;
+   font-size: 0.9rem;
+ }
+
+ .pagination {
+   margin-bottom: 0;
+ }
+
+ .page-link {
+   color: #0d6efd;
+   border-radius: 4px;
+   margin: 0 3px;
+ }
+
+ .page-item.active .page-link {
+   background-color: #0d6efd;
+   border-color: #0d6efd;
+ }
+
+ /* Responsive adjustments */
+
+ @media (max-width: 767.98px) {
+   .dashboard-title {
+     font-size: 1.5rem;
+     margin-bottom: 10px;
+   }
+
+   .header-section {
+     text-align: center;
+     margin-bottom: 20px;
+   }
+
+   .new-booking-btn {
+     margin-top: 15px;
+     width: 100%;
+   }
+
+   .search-container {
+     margin: 15px auto 0;
+     max-width: 100%;
+   }
+
+   .card-header-custom .row>div {
+     text-align: center;
+   }
+
+   .section-title {
+     margin-bottom: 15px;
+   }
+
+   .action-buttons {
+     flex-direction: column;
+     gap: 5px;
+   }
+
+   .btn-view,
+   .btn-delete {
+     width: 100%;
+   }
+
+   .pagination-info {
+     text-align: center;
+     margin-bottom: 10px;
+   }
+
+   .pagination {
+     justify-content: center !important;
+   }
+ }

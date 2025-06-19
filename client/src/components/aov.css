@@ -1,0 +1,150 @@
+.aov-stats-section {
+  width: 100vw;
+  background: #fffbe9;
+  padding: 80px 0 56px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.aov-stats-row {
+  display: flex;
+  gap: 80px;
+  justify-content: center;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+.aov-stat {
+  text-align: center;
+  min-width: 120px;
+}
+
+.aov-stat-value {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #7c4f1d;
+  margin-bottom: 6px;
+  letter-spacing: 1px;
+}
+
+.aov-stat-label {
+  font-size: 1.15rem;
+  color: #5a4a3c;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 900px) {
+  .aov-stats-row {
+    gap: 36px;
+  }
+  .aov-stat-value {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .aov-stats-section {
+    padding: 32px 0 12px 0;
+  }
+  .aov-stats-row {
+    gap: 18px;
+  }
+  .aov-stat-value {
+    font-size: 1.3rem;
+  }
+  .aov-stat-label {
+    font-size: 1rem;
+  }
+}
+
+.aov-hiw-section {
+  width: 100vw;
+  background: #e7f0f3;
+  padding: 56px 0 48px 0;
+  text-align: center;
+}
+
+.aov-hiw-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #7c4f1d;
+  margin-bottom: 8px;
+}
+
+.aov-hiw-desc {
+  color: #5a4a3c;
+  font-size: 1.15rem;
+  margin-bottom: 38px;
+  font-weight: 500;
+}
+
+.aov-hiw-row {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.aov-hiw-step {
+  flex: 1 1 180px;
+  max-width: 240px;
+  min-width: 150px;
+  margin: 0 8px;
+}
+
+.aov-hiw-icon {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 18px auto;
+  font-size: 2.2rem;
+  color: #7c4f1d;
+  box-shadow: 0 2px 12px 0 rgba(60,40,20,0.08);
+}
+
+.aov-hiw-step-title {
+  font-size: 1.18rem;
+  font-weight: 700;
+  color: #7c4f1d;
+  margin-bottom: 8px;
+}
+
+.aov-hiw-step-desc {
+  color: #5a4a3c;
+  font-size: 1.05rem;
+  font-weight: 500;
+}
+
+@media (max-width: 900px) {
+  .aov-hiw-row {
+    gap: 24px;
+  }
+  .aov-hiw-step {
+    max-width: 180px;
+  }
+}
+
+@media (max-width: 600px) {
+  .aov-hiw-section {
+    padding: 32px 0 24px 0;
+  }
+  .aov-hiw-title {
+    font-size: 1.3rem;
+  }
+  .aov-hiw-row {
+    gap: 10px;
+  }
+  .aov-hiw-step {
+    max-width: 100%;
+    min-width: 120px;
+  }
+  .aov-hiw-icon {
+    width: 48px;
+    height: 48px;
+    font-size: 1.3rem;
+  }
+} 

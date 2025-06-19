@@ -1,0 +1,35 @@
+body {
+  font-family: 'Inter', 'Poppins', 'Montserrat', Arial, sans-serif;
+  background: #f7f9fa;
+  color: #222;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', 'Inter', Arial, sans-serif;
+  font-weight: 800;
+  color: #1a2235;
+  margin-top: 0;
+}
+
+a {
+  color: #00c6ae;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+a:hover {
+  color: #ffd34d;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  background: #e3e7ed;
+}
+::-webkit-scrollbar-thumb {
+  background: #c1c7d0;
+  border-radius: 8px;
+}
