@@ -8,3 +8,5 @@
 <p> for Structure</p>
 <li><strong>CSS</strong></li>
 <p> for Styling</p>
+<li><strong>JS</strong></li>
+<p> for Logic</p>
