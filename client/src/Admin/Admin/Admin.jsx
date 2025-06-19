@@ -12,6 +12,8 @@ const Admin = () => {
       const res = await axios.get("http://localhost:2000/api/get/company", {
         withCredentials: true,
       });
+
+      // cookies send
       setCompanies(res.data.data || []);
       setError("");
     } catch (err) {
@@ -22,6 +24,8 @@ const Admin = () => {
     }
   };
 
+
+  // verificaiton 
   const handleApprove = async (id) => {
     try {
       const res = await axios.post(
@@ -74,6 +78,8 @@ const Admin = () => {
     }
   };
 
+
+  // run when page is load 
   useEffect(() => {
     fetchCompanies();
   }, []);
